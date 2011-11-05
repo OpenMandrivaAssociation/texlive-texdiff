@@ -15,7 +15,8 @@ Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdiff.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdiff.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
 Provides:	texlive-texdiff.bin = %{EVRD}
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3

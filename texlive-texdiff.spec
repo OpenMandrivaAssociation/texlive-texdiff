@@ -1,4 +1,4 @@
-# revision 18835
+# revision 26313
 # category Package
 # catalog-ctan /support/texdiff
 # catalog-date 2009-11-10 00:58:07 +0100
@@ -6,7 +6,7 @@
 # catalog-version 0.4
 Name:		texlive-texdiff
 Version:	0.4
-Release:	2
+Release:	3
 Summary:	Compare documents and produce tagged merge
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/texdiff

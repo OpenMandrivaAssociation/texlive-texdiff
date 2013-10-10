@@ -1,12 +1,12 @@
-# revision 26313
+# revision 29752
 # category Package
 # catalog-ctan /support/texdiff
-# catalog-date 2009-11-10 00:58:07 +0100
+# catalog-date 2012-06-27 20:43:57 +0200
 # catalog-license artistic
 # catalog-version 0.4
 Name:		texlive-texdiff
 Version:	0.4
-Release:	3
+Release:	4
 Summary:	Compare documents and produce tagged merge
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/texdiff
@@ -38,9 +38,9 @@ with grey bars by the LaTeX changebar package.
 %files
 %{_bindir}/texdiff
 %{_texmfdistdir}/scripts/texdiff/texdiff
-%doc %{_texmfdistdir}/doc/support/texdiff/README
 %doc %{_mandir}/man1/texdiff.1*
-%doc %{_texmfdir}/doc/man/man1/texdiff.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/texdiff.man1.pdf
+%doc %{_texmfdistdir}/doc/support/texdiff/README
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,23 +54,6 @@ pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/texdiff/texdiff texdiff
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.4-3
-+ Revision: 812894
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.4-2
-+ Revision: 756603
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.4-1
-+ Revision: 719680
-- texlive-texdiff
-- texlive-texdiff
-- texlive-texdiff
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1

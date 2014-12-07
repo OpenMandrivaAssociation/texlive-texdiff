@@ -6,7 +6,7 @@
 # catalog-version 0.4
 Name:		texlive-texdiff
 Version:	0.4
-Release:	10
+Release:	11
 Summary:	Compare documents and produce tagged merge
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/texdiff

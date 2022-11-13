@@ -1,18 +1,12 @@
-# revision 29752
-# category Package
-# catalog-ctan /support/texdiff
-# catalog-date 2012-06-27 20:43:57 +0200
-# catalog-license artistic
-# catalog-version 0.4
 Name:		texlive-texdiff
-Version:	0.4
-Release:	13
+Version:	29752
+Release:	1
 Summary:	Compare documents and produce tagged merge
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/texdiff
 License:	ARTISTIC
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdiff.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdiff.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdiff.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdiff.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ Furthermore, passages with changes are marked at the margin
 with grey bars by the LaTeX changebar package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,14 +38,14 @@ with grey bars by the LaTeX changebar package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/texdiff/texdiff texdiff
+ln -sf %{_texmfdistdir}/scripts/texdiff/texdiff texdiff
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}

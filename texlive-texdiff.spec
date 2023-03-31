@@ -1,6 +1,6 @@
 Name:		texlive-texdiff
 Version:	29752
-Release:	1
+Release:	2
 Summary:	Compare documents and produce tagged merge
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/texdiff

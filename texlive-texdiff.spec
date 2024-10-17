@@ -3,7 +3,7 @@ Version:	29752
 Release:	2
 Summary:	Compare documents and produce tagged merge
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/texdiff
+URL:		https://www.ctan.org/tex-archive/support/texdiff
 License:	ARTISTIC
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdiff.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdiff.doc.r%{version}.tar.xz

@@ -1,5 +1,6 @@
 %global tl_name texdiff
 %global tl_revision 79618
+%global tl_bin_links texdiff:%{_texmfdistdir}/scripts/texdiff/texdiff
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -15,6 +16,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(texdiff.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 Two files are compared and a new TeX file is output. When the output
